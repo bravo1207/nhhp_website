@@ -1,0 +1,152 @@
+/*================================
+     CONTACT SECTION STYLING
+==================================*/
+
+/* Main contact section styling */
+section.contact-section {
+    background-color: var(--color-cream);
+    padding: var(--spacing-3xl) 0;
+    margin-bottom: 0; /* Remove margin to prevent gap above footer */
+}
+
+.contact-section .section-title {
+    color: var(--color-hunter);
+    margin-bottom: 1.5rem;
+}
+
+.contact-section .section-subtitle {
+    text-align: center;
+    max-width: 1200px; /* Standardized to 1200px width */
+    margin: 0 auto 3rem auto;
+}
+
+/* Contact content layout */
+.contact-section .contact-content {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--color-white);
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Contact info grid */
+.contact-section .contact-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 3rem;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Individual contact method styling */
+.contact-section .contact-method, 
+.contact-section .contact-hours {
+    padding: 1.5rem;
+    background-color: var(--color-background-white);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-section .contact-method:hover, 
+.contact-section .contact-hours:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section .contact-method h3, 
+.contact-section .contact-hours h3 {
+    font-family: var(--font-title);
+    color: var(--color-hunter);
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.contact-section .contact-method h3:after, 
+.contact-section .contact-hours h3:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-brass), var(--color-gold));
+    border-radius: 2px;
+}
+
+.contact-section .contact-method p, 
+.contact-section .contact-hours p {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.contact-section .contact-note {
+    font-size: 0.9rem !important;
+    color: var(--text-secondary) !important;
+    font-style: italic;
+}
+
+/* Social media links for contact section */
+.contact-section .contact-social {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.2rem;
+    justify-content: flex-start;
+}
+
+.contact-section .contact-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-hunter);
+    border-radius: 50%;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-section .contact-social a:hover {
+    background-color: var(--color-brass);
+    transform: scale(1.1);
+}
+
+.contact-section .contact-social img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+/* Responsive styling */
+@media (max-width: 900px) {
+    .contact-section .contact-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-section .contact-content {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section .contact-method, 
+    .contact-section .contact-hours {
+        padding: 1.25rem;
+    }
+    
+    .contact-section .contact-method h3, 
+    .contact-section .contact-hours h3 {
+        font-size: 1.2rem;
+    }
+    
+    .contact-section .contact-method p, 
+    .contact-section .contact-hours p {
+        font-size: 1rem;
+    }
+}

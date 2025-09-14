@@ -1,0 +1,90 @@
+/* =====================================
+   Modern Reset / Base Styles (2025)
+   Clean & lightweight alternative to full Normalize.css
+   For NHHP Project
+===================================== */
+
+/* 1. Box Sizing & Default Margin Removal */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Set Core Defaults */
+html {
+  line-height: 1.15; /* Slightly better than 1 for legibility */
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape on iOS */
+  scroll-behavior: smooth; /* Smooth scroll for anchor links */
+}
+
+body {
+  line-height: 1.5; /* Comfortable reading line-height */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  font-family: system-ui, sans-serif; /* Fallback if main CSS fails to load */
+}
+
+/* 3. Remove Default List & Quote Styles */
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: ("");
+}
+
+/* 4. Tables */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 5. Media Elements Responsive by Default */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 6. Remove Built-in Form Margins & Inherit Fonts */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* Optional: restore pointer for buttons */
+button {
+  cursor: pointer;
+}
+
+/* 7. Anchor Defaults */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}

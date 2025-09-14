@@ -1,0 +1,105 @@
+/*================================
+     NO SCRIPT FALLBACK STYLES
+==================================*/
+
+/* Hide JavaScript-dependent elements when JS is disabled */
+.js-only {
+    display: none !important;
+}
+
+/* Show noscript-specific content */
+.no-js-show {
+    display: block;
+}
+
+/* Slideshow fallback - show first image only */
+.slideshow-container:not(.js-enabled) .slide:not(:first-child) {
+    display: none;
+}
+
+.slideshow-container:not(.js-enabled) .slide:first-child {
+    display: block;
+    position: static;
+    opacity: 1;
+}
+
+/* Hide slideshow controls without JS */
+.slideshow-container:not(.js-enabled) .slideshow-nav,
+.slideshow-container:not(.js-enabled) .slideshow-dots,
+.slideshow-container:not(.js-enabled) .slideshow-controls {
+    display: none;
+}
+
+/* Navigation fallback */
+.mobile-menu-toggle {
+    display: none;
+}
+
+.nav-menu {
+    display: block !important;
+    position: static !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Form enhancements without JS */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: var(--font-weight-medium);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    font-family: inherit;
+}
+
+/* Loading state fallback */
+.loading-overlay {
+    display: none;
+}
+
+/* Image fallbacks */
+.lazy-image {
+    opacity: 1;
+}
+
+.image-placeholder {
+    display: none;
+}
+
+/* Animation fallbacks */
+.fade-in,
+.slide-in,
+.zoom-in {
+    opacity: 1;
+    transform: none;
+}
+
+/* Accessibility message */
+.noscript-message {
+    padding: var(--spacing-lg, 2rem);
+    text-align: center;
+    background: var(--bg-light, #f8f9fa);
+    border: 2px solid var(--color-brass, #C3A34B);
+    margin: var(--spacing-lg, 2rem);
+    border-radius: var(--border-radius, 8px);
+}
+
+.noscript-fallback h2 {
+    color: var(--color-hunter, #355E3B);
+    margin-bottom: var(--spacing-md, 1rem);
+}
+
+.noscript-fallback p {
+    color: var(--text-secondary, #666);
+    line-height: 1.6;
+}

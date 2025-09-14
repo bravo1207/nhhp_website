@@ -1,0 +1,245 @@
+/* ======================== */
+/*        HEADER CSS        */
+/* ======================== */
+
+/* Header Container - Support both class names */
+
+.site-header,
+.header {
+    background: linear-gradient(135deg, var(--color-hunter, #355E3B), var(--color-hunter-hover, #2A462F));
+    color: var(--text-inverse, white);
+    padding: var(--spacing-md, 1rem) 0;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1000;
+}
+
+.site-header.scrolled, .header.scrolled {
+    box-shadow: 0 6px 24px rgba(53,94,59,0.18);
+    background: rgba(42,70,47,0.92);
+}
+
+.site-header.scrolled, .header.scrolled {
+    box-shadow: 0 6px 24px rgba(53,94,59,0.18);
+    background: linear-gradient(135deg, var(--color-hunter-hover, #2A462F), var(--color-hunter, #355E3B));
+}
+
+/* Header Content */
+.header-content {
+    max-width: var(--max-width, 1200px);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md, 1rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Section */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-image {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo h1,
+.logo-title {
+    font-family: var(--font-family-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-white);
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.tagline,
+.logo-tagline {
+    font-size: 0.9rem;
+    color: var(--color-cream);
+    margin: 0;
+    font-style: italic;
+}
+
+/* Navigation */
+.nav-menu,
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
+    gap: 2rem;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+.nav-menu a,
+.main-nav a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    position: relative;
+}
+
+.nav-menu a:hover,
+.main-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-cream);
+    transform: translateY(-1px);
+}
+
+.nav-menu a::after,
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--color-cream);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-menu a:hover::after,
+.main-nav a:hover::after {
+    width: 80%;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--color-white);
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* Active and Focused Nav Links */
+.main-nav a.active,
+.main-nav a:focus {
+    background: var(--color-brass); /* Brass background */
+    color: var(--color-hunter); /* Hunter green text */
+    outline: none; /* Optional: improve accessibility by adding focus outline if needed */
+}
+
+/* Hover State for Nav Links */
+.main-nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-brass); /* Brass text */
+}
+
+/* ======================== */
+/*     RESPONSIVE HEADER    */
+/* ======================== */
+
+@media (max-width: 768px) {
+    .header-content {
+        padding: 0 1rem;
+    }
+    
+    .logo h1 {
+        font-size: 1.25rem;
+    }
+    
+    .tagline {
+        font-size: 0.8rem;
+    }
+    
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--color-hunter);
+        flex-direction: column;
+        padding: 1rem 0;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        gap: 0;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .nav-menu a {
+        display: block;
+        padding: 1rem 2rem;
+        border-radius: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100%;
+        text-align: left;
+    }
+    
+    .nav-menu a:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+        transform: none;
+    }
+    
+    .nav-menu a::after {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .logo-image {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .logo h1 {
+        font-size: 1.1rem;
+    }
+    
+    .tagline {
+        font-size: 0.75rem;
+    }
+}

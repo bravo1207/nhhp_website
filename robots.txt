@@ -1,0 +1,13 @@
+# North Houston Horse Park - Robots.txt
+# This file helps search engines understand how to crawl our site
+
+User-agent: *
+Allow: /
+
+# Allow access to main content areas
+Allow: /css/
+Allow: /js/
+Allow: /assets/
+
+# Sitemaps
+Sitemap: https://northhoustonhorsepark.com/sitemap.xml

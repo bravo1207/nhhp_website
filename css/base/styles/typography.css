@@ -1,0 +1,198 @@
+/*========================================
+  TYPOGRAPHY FOUNDATION
+  
+  This file contains all text-related styles:
+  1. Headings and titles
+  2. Body text styles
+  3. Links and text formatting
+  4. Responsive typography
+=========================================*/
+
+/*----------------------------------------
+  1. HEADINGS AND TITLES
+-----------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+  color: var(--text-primary);
+  line-height: 1.18;
+  margin-top: 0;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.2em;
+}
+
+h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75em;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+h5, h6 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+/* Section Titles */
+.section-title {
+  color: var(--color-hunter);
+  margin-bottom: 2.5rem;
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  text-shadow: 0 4px 16px var(--color-brass-light, rgba(195,163,75,0.12));
+  position: relative;
+  padding-bottom: 0.5em;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 5px;
+  margin: 1.2rem auto 0 auto;
+  background: linear-gradient(90deg, var(--color-brass), var(--color-gold), var(--color-brass));
+  border-radius: 3px;
+  opacity: 0.85;
+}
+
+.subtitle {
+  color: var(--color-brass);
+  font-family: var(--font-title);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  color: var(--color-brass);
+  font-weight: 600;
+}
+
+/*----------------------------------------
+  2. BODY TEXT STYLES
+-----------------------------------------*/
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-body);
+  color: var(--text-default);
+  background-color: var(--bg-page);
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+}
+
+.text-sm {
+  font-size: var(--font-size-sm);
+}
+
+.text-lg {
+  font-size: var(--font-size-lg);
+}
+
+.text-lead {
+  font-size: var(--font-size-lg);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-lg);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/*----------------------------------------
+  3. LINKS AND TEXT FORMATTING
+-----------------------------------------*/
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+strong, b {
+  font-weight: 600;
+}
+
+em, i {
+  font-style: italic;
+}
+
+.text-primary {
+  color: var(--color-hunter);
+}
+
+.text-secondary {
+  color: var(--color-brass);
+}
+
+.text-muted {
+  color: var(--color-gray);
+}
+
+.text-white {
+  color: var(--color-white);
+}
+
+/*----------------------------------------
+  4. RESPONSIVE TYPOGRAPHY
+-----------------------------------------*/
+@media (max-width: 768px) {
+  h1 {
+    font-size: calc(var(--font-size-xl) + 0.3rem);
+  }
+  
+  h2 {
+    font-size: var(--font-size-xl);
+  }
+  
+  h3 {
+    font-size: calc(var(--font-size-lg) + 0.2rem);
+  }
+  
+  .text-lead {
+    font-size: var(--font-size-md);
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: calc(var(--font-size-md) - 0.05rem);
+  }
+  
+  h1 {
+    font-size: var(--font-size-xl);
+  }
+  
+  h2 {
+    font-size: calc(var(--font-size-lg) + 0.2rem);
+  }
+}

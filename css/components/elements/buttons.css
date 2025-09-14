@@ -1,0 +1,183 @@
+/*========================================
+  BUTTON COMPONENTS
+  
+  This file contains all button styles for:
+  1. Base/default buttons
+  2. Primary/hunter green buttons 
+  3. Brass CTA buttons
+  4. Context-specific button styles
+=========================================*/
+
+/*----------------------------------------
+  1. BASE BUTTON STYLES
+-----------------------------------------*/
+.btn {
+  display: inline-block;
+  padding: 1.1em 2.2em;
+  text-decoration: none;
+  border-radius: 2em;
+  font-weight: 700;
+  text-align: center;
+  transition: box-shadow 0.2s, transform 0.2s, background 0.2s, color 0.2s;
+  border: none;
+  cursor: pointer;
+  font-size: 1.08rem;
+  box-shadow: 0 2px 8px rgba(53,94,59,0.10);
+  will-change: transform, box-shadow;
+}
+
+/*----------------------------------------
+  2. PRIMARY/HUNTER BUTTONS
+-----------------------------------------*/
+.btn-primary,
+.btn-green,
+.main-slideshow-cta {
+  background: linear-gradient(135deg, var(--color-hunter, #355e3b), var(--color-hunter-hover, #2a462f));
+  color: var(--text-inverse, #fff);
+  box-shadow: 0 6px 18px rgba(53,94,59,0.18);
+  border: none;
+  letter-spacing: 0.02em;
+  font-size: 1.12rem;
+}
+
+.btn-primary:hover,
+.btn-green:hover,
+.main-slideshow-cta:hover {
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 16px 48px rgba(53,94,59,0.22);
+  background: var(--color-hunter-hover);
+  color: var(--text-inverse, #fff);
+  text-decoration: none;
+}
+  
+.btn-primary:active,
+.btn-green:active,
+.main-slideshow-cta:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 8px rgba(53,94,59,0.10);
+}
+
+/*----------------------------------------
+  3. BRASS CTA BUTTONS
+-----------------------------------------*/
+
+.btn-brass-cta {
+  background: linear-gradient(90deg, var(--color-brass), var(--color-gold));
+  color: var(--color-hunter);
+  font-weight: 700;
+  border-radius: 2rem;
+  padding: 1rem 2.5rem;
+  box-shadow: 0 2px 12px var(--color-brass-glow);
+  margin: 0 auto;
+  border: 2px solid var(--color-brass);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s, border 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-brass-cta::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  background: var(--color-gold-glow);
+  opacity: 0.25;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s cubic-bezier(.23,1.01,.32,1), height 0.4s cubic-bezier(.23,1.01,.32,1);
+  z-index: 0;
+}
+
+.btn-brass-cta:active::after {
+  width: 200%;
+  height: 200%;
+}
+
+.btn-brass-cta:hover, .btn-brass-cta:focus-visible {
+  background: linear-gradient(90deg, var(--color-brass-hover), var(--color-gold-hover));
+  color: var(--color-hunter);
+  box-shadow: 0 4px 24px var(--color-gold-glow);
+  border-color: var(--color-gold);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.btn-brass-cta:hover,
+.btn-brass-cta:focus-visible {
+  background: var(--color-brass-hover);
+  color: var(--color-hunter);
+  box-shadow: 0 4px 24px var(--color-gold-glow);
+  transform: translateY(-2px) scale(1.04);
+}
+
+/*----------------------------------------
+  4. CONTEXT-SPECIFIC BUTTONS
+-----------------------------------------*/
+/* Training special call to action button */
+.training-special-cta .btn-primary {
+  font-size: 1.08rem;
+  padding: 0.7rem 2.2rem;
+  border-radius: 0.7rem;
+  box-shadow: 0 2px 8px var(--color-brass-glow);
+  background: var(--color-brass);
+  color: var(--color-hunter);
+  font-weight: 700;
+  border: none;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.training-special-cta .btn-primary:hover,
+.training-special-cta .btn-primary:focus-visible {
+  background: var(--color-brass-dark);
+  color: var(--color-hunter);
+  box-shadow: 0 4px 16px var(--color-brass-glow);
+}
+
+/* Pricing Card Button Styles */
+.pricing-card .btn {
+  margin-top: auto;
+  flex-shrink: 0;
+  font-size: var(--font-size-md);
+  padding: 0.7rem 1.3rem;
+}
+
+/* Card Button Full Width */
+.pricing-card a[class^="btn"] {
+  margin-top: auto;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  font-size: var(--font-size-md);
+  text-align: center;
+  font-weight: 700;
+  border-radius: 0.7rem;
+}
+
+/*----------------------------------------
+  5. RESPONSIVE BUTTON STYLES
+-----------------------------------------*/
+/* Tablet and mobile adjustments */
+@media (max-width: 768px) {
+  .btn,
+  button {
+    font-size: 0.9rem;
+    padding: 0.5em 0.7em;
+  }
+}
+
+/* Small mobile adjustments */
+@media (max-width: 600px) {
+  .btn,
+  button {
+    font-size: 0.98rem;
+    padding: 0.6em 0.9em;
+  }
+}
+
+/* Special case: Force white text for main-slideshow-cta button */
+.btn-green.main-slideshow-cta,
+.btn-green.main-slideshow-cta:hover,
+.btn-green.main-slideshow-cta:focus-visible {
+  color: var(--color-white) !important;
+}

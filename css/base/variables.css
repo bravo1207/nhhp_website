@@ -1,0 +1,295 @@
+/* ================================
+   North Houston Horse Park Theme - Consolidated Variables
+================================ */
+
+:root {
+  /* 
+  =============================
+  1. LAYOUT & SPACING
+  =============================
+  */
+  /* Width Variables */
+  --max-width: 1200px;
+  --content-width: 900px;
+  --card-width: 320px;
+  
+  /* Spacing System */
+  --spacing-xs: 0.25rem;   /* 4px - Tiny spacing */
+  --spacing-sm: 0.5rem;    /* 8px - Small spacing */
+  --spacing-md: 1rem;      /* 16px - Base spacing unit */
+  --spacing-lg: 2rem;      /* 32px - Large spacing */
+  --spacing-xl: 4rem;      /* 64px - Extra large spacing */
+
+  /* Section Spacing */
+  --section-spacing-sm: var(--spacing-md);
+  --section-spacing-md: var(--spacing-lg);
+  --section-spacing-lg: var(--spacing-xl);
+  
+  /* Border & Radius */
+  --border-radius: 8px;      /* Default border radius */
+  --border-width: 1px;       /* Default border width */
+  --card-radius-sm: 0.75rem;
+  --card-radius-md: 1rem;
+  --card-radius-lg: 1.25rem; /* Card corner radius large */
+  --card-radius-xl: 1.5rem;  /* Card corner radius xl */
+  
+  /* 
+  =============================
+  2. COLOR PALETTE
+  =============================
+  */
+  /* Brand Colors */
+  --color-hunter: #355E3B;           /* Primary hunter green */
+  --color-hunter-hover: #2A462F;     /* Darker hover state */
+  --color-brass: #C3A34B;            /* Accent brass/gold */
+  --color-brass-hover: #B8983F;      /* Brass hover */
+  --color-gold: #FFD700;             /* Gold accent */
+  --color-gold-hover: #D4B16A;       /* Gold hover state */
+  
+  /* Neutral Colors */
+  --color-white: #ffffff;            /* Pure white */
+  --color-cream: #EFE9E1;            /* Cream background */
+  --color-gray-light: #f8f9fa;       /* General light gray */
+  --color-gray: #6c757d;             /* General gray */
+  --color-gray-border: #e9ecef;      /* Border gray */
+  --color-dark: #2c3e50;             /* Dark navy */
+  
+  /* Equestrian Accent Colors */
+  --color-saddle: #8B5C2A;           /* Deep saddle brown */
+  --color-leather: #C19A6B;          /* Leather tan */
+  --color-navy: #23395d;             /* Classic navy blue */
+  --color-brown-light: #D8CAB8;      /* Light brown */
+  --color-sand: #E4D5B7;             /* Arena sand */
+  --color-sky: #A3C6E6;              /* Soft sky blue */
+  --color-popular: #228b22;          /* Popular option green */
+
+  /* 
+  =============================
+  3. FUNCTIONAL COLORS
+  =============================
+  */
+  /* Feedback Colors */
+  --color-success: #4F7F4F;          /* Soft green for success */
+  --color-warning: #C19A6B;          /* Leather tan for warning */
+  --color-error: #A94442;            /* Muted red for error */
+  --color-info: var(--color-navy);
+  --color-neutral: var(--color-gray);
+  
+  /* Notification/Alert Colors */
+  --color-success-bg: #E4F3E4;
+  --color-success-text: var(--color-success);
+  --color-success-border: #B7D4B7;
+  
+  --color-warning-bg: #F5EDE4;
+  --color-warning-text: var(--color-warning);
+  --color-warning-border: #E4D5B7;
+  
+  --color-error-bg: #F8E4E4;
+  --color-error-text: var(--color-error);
+  --color-error-border: #D5A3A3;
+  
+  --color-info-bg: #E6ECF3;
+  --color-info-text: var(--color-info);
+  --color-info-border: #A3B7C6;
+
+  /* State Colors */
+  --color-focus: var(--color-hunter);
+  --color-outline: var(--color-brass);
+  --color-disabled-bg: #f0f0f0;
+  --color-disabled-text: #bdbdbd;
+  
+  /* Link Colors */
+  --color-link: var(--color-navy);
+  --color-link-hover: var(--color-hunter);
+  
+  /* Background & Text Colors */
+  --bg-page: var(--color-cream);
+  --bg-card: var(--color-white);
+  --bg-light: var(--color-gray-light);
+  --text-primary: var(--color-dark);
+  --text-secondary: var(--color-brass);
+  --text-default: var(--color-dark);
+  --text-inverse: var(--color-white);
+  
+  /* Modern background/text aliases */
+  --color-background-dark: var(--color-dark);
+  --color-background-light: var(--color-gray-light);
+  --color-text-primary: var(--color-dark);
+  --color-border: var(--color-gray-border);
+  
+  /* Overlay & Effects */
+  --color-backdrop: rgba(44, 62, 80, 0.5);
+  --color-hunter-glow: rgba(53, 94, 59, 0.4);
+  --color-brass-glow: rgba(195, 163, 75, 0.4);
+  --color-gold-glow: rgba(255, 215, 0, 0.4);
+  --color-brass-light: rgba(195, 163, 75, 0.1);
+  
+  /* Border Variables */
+  --border-color: var(--color-gray-border);
+
+  /* 
+  =============================
+  4. COMPONENT COLORS
+  =============================
+  */
+  /* Button Colors */
+  --btn-bg-primary: var(--color-hunter);
+  --btn-text-primary: var(--color-white);
+  --btn-bg-secondary: var(--color-brass);
+  --btn-text-secondary: var(--color-white);
+  --btn-bg-outline: transparent;
+  --btn-text-outline: var(--color-hunter);
+  
+  /* Card Colors */
+  --card-bg: var(--color-gray-light, #f8f9fa);
+  --card-border: var(--color-brass);
+  --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  
+  
+  /*
+  =============================
+  5. TYPOGRAPHY
+  =============================
+  */
+  /* Font Families */
+  --font-title: 'Playfair Display', serif;
+  --font-body: 'Open Sans', Arial, sans-serif;
+
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;   /* 12px */
+  --font-size-sm: 0.875rem;  /* 14px */
+  --font-size-md: 1rem;      /* 16px - Base font size */
+  --font-size-lg: 1.25rem;   /* 20px */
+  --font-size-xl: 1.5rem;    /* 24px */
+  --font-size-xxl: 2rem;     /* 32px */
+
+  /* Line Heights */
+  --line-height-body: 1.6;   /* For paragraphs */
+  --line-height-heading: 1.3; /* For headings */
+  --line-height-tight: 1.2;  /* For tight spacing */
+  --line-height-relaxed: 1.7; /* For relaxed/comfortable spacing */
+  
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.01em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.02em;
+
+  /* Modern font aliases */
+  --font-family-heading: var(--font-title);
+  --font-family-body: var(--font-body);
+  --font-size-base: var(--font-size-md);
+
+
+  /*
+  =============================
+  6. EFFECTS & ANIMATIONS
+  =============================
+  */
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.15);
+
+  /* Transitions */
+  --transition-fast: all 0.2s ease;
+  --transition-base: all 0.3s ease;
+  --transition-slow: all 0.5s ease;
+  --transition-all: var(--transition-base); /* Common alias */
+  
+  /* Animations */
+  --animation-duration-fast: 0.2s;
+  --animation-duration-normal: 0.3s;
+  --animation-duration-slow: 0.5s;
+
+  /*
+  =============================
+  7. LAYOUT & STRUCTURE
+  =============================
+  */
+  /* Section Sizing */
+  --section-padding: clamp(1.6rem, 4vw, 3.2rem);
+  
+  /* Z-index Layers */
+  --z-header: 800;
+  --z-dropdown: 900;
+  --z-modal: 1000;
+  --z-tooltip: 1100;
+
+  /* Breakpoints */
+  --bp-mobile: 768px;
+  --bp-tablet: 1024px;
+  --bp-desktop: 1200px;
+  --bp-large: 1440px;
+
+  /*
+  =============================
+  8. MODERN CSS VARIABLE ALIASES (Essential Only)
+  =============================
+  */
+  /* Essential color aliases (used in components) */
+  --color-primary: var(--color-hunter);
+  --color-primary-dark: var(--color-hunter-hover);
+  --color-primary-light: var(--color-brass-light);
+  --color-secondary: var(--color-brass);
+  
+  /* Modern spacing system aliases */
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  --spacing-4xl: 5rem;
+  --spacing-5xl: 6rem;
+  --spacing-6xl: 8rem;
+  
+  /* Container widths */
+  --container-max-width: var(--max-width);
+  
+  /* Border radius modern names */
+  --border-radius-sm: 0.375rem;
+  --border-radius-lg: var(--card-radius-lg);
+  --border-radius-full: 9999px;
+  
+  /* Essential shadows */
+  --shadow-card: var(--card-shadow);
+  --shadow-card-hover: 0 4px 20px rgba(0, 0, 0, 0.1);
+  --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-feature-hover: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Global focus indicator for accessibility */
+:focus-visible {
+  outline: 3px solid var(--color-outline, #C3A34B);
+  outline-offset: 2px;
+  transition: outline 0.2s;
+}
+
+/* Fallback styles for JS-generated classes not covered elsewhere */
+.bbb-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.rating-text {
+  font-size: 0.95em;
+  color: var(--color-hunter, #2d4739);
+}
+.training-philosophy-card {
+  background: var(--color-white, #fff);
+  border-radius: 0.5em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+}
+.advantages-card {
+  background: var(--color-brass, #e6b800);
+  border-radius: 0.5em;
+  color: var(--color-hunter, #2d4739);
+  padding: 1.25em 1.5em;
+  margin-bottom: 1.5em;
+}

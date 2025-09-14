@@ -1,0 +1,66 @@
+/* Enhanced Responsive Design */
+
+/* Navigation - Hide mobile menu toggle on desktop */
+@media (min-width: 769px) {
+    .mobile-menu-toggle {
+        display: none !important;
+    }
+    
+    .nav-menu {
+        display: flex !important;
+        position: static !important;
+        background: none !important;
+        box-shadow: none !important;
+        flex-direction: row !important;
+        gap: 2rem !important;
+        padding: 0 !important;
+        width: auto !important;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .main-slideshow-tagline {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .main-slideshow-content {
+        padding: var(--spacing-md, 1rem);
+        margin: 0 var(--spacing-md, 1rem);
+    }
+    
+    .about-highlights {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+
+    
+    /* Footer responsive */
+    .footer-info {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    /* Header responsive */
+    .header-content {
+        flex-wrap: wrap;
+    }
+    
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+    
+    .tagline {
+        font-size: 0.8rem;
+    }
+}
