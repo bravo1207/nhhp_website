@@ -11,8 +11,8 @@ const FOOTER_TEMPLATE = `
             <div class="footer-main-sections">
                 <div class="footer-section contact-section">
                     <h3>Contact Us</h3>
-                    <p>Phone: 936.273.5600</p>
-                    <p>Email: nhhp@consolidated.net</p>
+                    <p>Phone: <a href="tel:9362735600">936.273.5600</a></p>
+                    <p>Email: <a href="mailto:nhhp@consolidated.net">nhhp@consolidated.net</a></p>
                 </div>
                 
                 <div class="footer-section location-section">
@@ -70,3 +70,4 @@ function loadFooter() {
     document.body.insertAdjacentHTML("beforeend", FOOTER_TEMPLATE);
   }
 }
+
